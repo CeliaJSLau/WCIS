@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class ReturnStatusList  implements java.io.Serializable {
-    private int returnCode;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4249335752593659183L;
+
+	private int returnCode;
 
     private java.lang.String returnMsg;
 

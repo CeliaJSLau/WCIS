@@ -1,0 +1,319 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from main WSDL service -->
+
+  <service name="mainSoap" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://tempuri.org/WSLCSD/Service"/>
+      <parameter name="wsdlServiceElement" value="main"/>
+      <parameter name="schemaQualified" value="http://tempuri.org/WSLCSD/Service"/>
+      <parameter name="wsdlServicePort" value="mainSoap"/>
+      <parameter name="className" value="org.tempuri.WSLCSD.Service.MainSoapSkeleton"/>
+      <parameter name="wsdlPortType" value="mainSoap"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+      <parameter name="scope" value="Application"/>
+
+      <arrayMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ArrayOfLCSDMappingList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDMappingList[]"
+        innerType="cmp-ns:LCSDMappingList" xmlns:cmp-ns="http://tempuri.org/WSLCSD/Service"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LCSDMappingList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDMappingList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LoginReq"
+        type="java:org.tempuri.WSLCSD.Service.LoginReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDMappingListReq"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDMappingListReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LoginRsp"
+        type="java:org.tempuri.WSLCSD.Service.LoginRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ArrayOfLCSDSubjectMatterList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDSubjectMatterList[]"
+        innerType="cmp-ns:LCSDSubjectMatterList" xmlns:cmp-ns="http://tempuri.org/WSLCSD/Service"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ArrayOfReturnStatusList"
+        type="java:org.tempuri.WSLCSD.Service.ReturnStatusList[]"
+        innerType="cmp-ns:ReturnStatusList" xmlns:cmp-ns="http://tempuri.org/WSLCSD/Service"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDMappingListRsp"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDMappingListRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDCaseDetailReq"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDCaseDetailReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDSubjectMatterListReq"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDSubjectMatterListReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LCSDSubjectMatterList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDSubjectMatterList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LCSDCaseDetailList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDCaseDetailList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDCaseDetailRsp"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDCaseDetailRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:UploadLCSDFileRsp"
+        type="java:org.tempuri.WSLCSD.Service.UploadLCSDFileRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDSubjectMatterListRsp"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDSubjectMatterListRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ReturnStatusList"
+        type="java:org.tempuri.WSLCSD.Service.ReturnStatusList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:UploadLCSDFileReq"
+        type="java:org.tempuri.WSLCSD.Service.UploadLCSDFileReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ArrayOfLCSDCaseDetailList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDCaseDetailList[]"
+        innerType="cmp-ns:LCSDCaseDetailList" xmlns:cmp-ns="http://tempuri.org/WSLCSD/Service"
+        encodingStyle=""
+      />
+  </service>
+  <service name="mainSoap12" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://tempuri.org/WSLCSD/Service"/>
+      <parameter name="wsdlServiceElement" value="main"/>
+      <parameter name="schemaQualified" value="http://tempuri.org/WSLCSD/Service"/>
+      <parameter name="wsdlServicePort" value="mainSoap12"/>
+      <parameter name="className" value="org.tempuri.WSLCSD.Service.MainSoap12Skeleton"/>
+      <parameter name="wsdlPortType" value="mainSoap"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+      <parameter name="scope" value="Application"/>
+
+      <arrayMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ArrayOfLCSDMappingList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDMappingList[]"
+        innerType="cmp-ns:LCSDMappingList" xmlns:cmp-ns="http://tempuri.org/WSLCSD/Service"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LCSDMappingList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDMappingList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LoginReq"
+        type="java:org.tempuri.WSLCSD.Service.LoginReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDMappingListReq"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDMappingListReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LoginRsp"
+        type="java:org.tempuri.WSLCSD.Service.LoginRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ArrayOfLCSDSubjectMatterList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDSubjectMatterList[]"
+        innerType="cmp-ns:LCSDSubjectMatterList" xmlns:cmp-ns="http://tempuri.org/WSLCSD/Service"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ArrayOfReturnStatusList"
+        type="java:org.tempuri.WSLCSD.Service.ReturnStatusList[]"
+        innerType="cmp-ns:ReturnStatusList" xmlns:cmp-ns="http://tempuri.org/WSLCSD/Service"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDMappingListRsp"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDMappingListRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDCaseDetailReq"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDCaseDetailReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDSubjectMatterListReq"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDSubjectMatterListReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LCSDSubjectMatterList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDSubjectMatterList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:LCSDCaseDetailList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDCaseDetailList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDCaseDetailRsp"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDCaseDetailRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:UploadLCSDFileRsp"
+        type="java:org.tempuri.WSLCSD.Service.UploadLCSDFileRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:GetLCSDSubjectMatterListRsp"
+        type="java:org.tempuri.WSLCSD.Service.GetLCSDSubjectMatterListRsp"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ReturnStatusList"
+        type="java:org.tempuri.WSLCSD.Service.ReturnStatusList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:UploadLCSDFileReq"
+        type="java:org.tempuri.WSLCSD.Service.UploadLCSDFileReq"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://tempuri.org/WSLCSD/Service"
+        qname="ns:ArrayOfLCSDCaseDetailList"
+        type="java:org.tempuri.WSLCSD.Service.LCSDCaseDetailList[]"
+        innerType="cmp-ns:LCSDCaseDetailList" xmlns:cmp-ns="http://tempuri.org/WSLCSD/Service"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class UploadLCSDFileReq  implements java.io.Serializable {
-    private java.lang.String token;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -994992666669066112L;
+
+	private java.lang.String token;
 
     private java.lang.String upload_Date;
 

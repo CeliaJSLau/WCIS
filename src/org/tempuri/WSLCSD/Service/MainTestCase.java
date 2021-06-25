@@ -7,8 +7,6 @@
 
 package org.tempuri.WSLCSD.Service;
 
-import junit.framework.TestResult;
-
 public class MainTestCase extends junit.framework.TestCase {
     public MainTestCase(java.lang.String name) {
         super(name);
@@ -39,9 +37,7 @@ public class MainTestCase extends junit.framework.TestCase {
 
         // Test operation
         org.tempuri.WSLCSD.Service.LoginRsp value = null;
-        value = binding.login(new org.tempuri.WSLCSD.Service.LoginReq("LCSD_WS","12345Abc"));
-        org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists=value.getReturnStatusLists();
-//        System.out.println(returnStatusLists[0].getReturnCode()+" "+returnStatusLists[0].getReturnMsg()+" "+returnStatusLists[0].getReturnKey()+" Celia: "+value.getToken());
+        value = binding.login(new org.tempuri.WSLCSD.Service.LoginReq());
         // TBD - validate results
     }
 
@@ -249,7 +245,5 @@ public class MainTestCase extends junit.framework.TestCase {
         value = binding.getLCSDCaseDetailList(new org.tempuri.WSLCSD.Service.GetLCSDCaseDetailReq());
         // TBD - validate results
     }
-    
-    
 
 }

@@ -7,185 +7,122 @@
 
 package org.tempuri.WSLCSD.Service;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-@XmlAccessorType(XmlAccessType.FIELD)
-//XML文件中的根标识
-
-//控制JAXB 绑定类中属性和字段的排序
-@XmlType(propOrder = { 
-		"caseNo",
-		"caseDate",
-		"caseStatusCode",
-		"statusCodeDate",
-		"referralNo",
-		"referralStatusCode",
-		"referralStatusCodeDate",
-		"caseTypeCode",
-		"channelCode",
-		"caseTitle",
-		"caseDesc",
-		"caseSource",
-		"caseChannel",
-		"branchCode",
-		"divisionCode",
-		"sectionCode",
-		"districtCode",
-		"venueCode",
-		"unitCode",
-		"officeCode",
-		"venueTypeCode",
-		"catCode",
-		"natureCode",
-		"staffGrade",
-		"staffRank",
-		"spVenueAns",
-		"spVenueTypeAns",
-		"spCatAns",
-		"spNatureAns",
-		"invtgResult",
-		"reqForService",
-		"duplicatedCase",
-		"duplicatedCaseRe",
-		"remarks",
-		"readyForReporting",
-		"subjectMatterCode",
-		"subjectOfficerPost",
-		"subjectOfficerEmail",
-		"subjectOfficerPhone",
-		"subjectOfficerFax",
-		"actionOfficerPost",
-		"actionOfficerEmail",
-		"actionOfficerPhone",
-		"actionOfficerFax",
-		"wcisURL",
-		"lastModifiedDate",
-		"lcsdFileReference",
-		"MISUpdateDate",
-		"crossDeptInd",
-		"coordinatorInd",
-		"coordinator",
-		"crossDept",
-		"anonymousInd",
-		"proformaInd",
-		"masterProformaCaseNo",
-		"referralCreateDate"
-})
 public class LCSDCaseDetailList  implements java.io.Serializable {
-	@XmlAttribute(name = "referralCreateDate")
-    private java.lang.String referralCreateDate;
-    @XmlAttribute(name = "masterProformaCaseNo")
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4716677945634639258L;
+
+	private java.lang.String referralCreateDate;
+
     private java.lang.String masterProformaCaseNo;
-    @XmlAttribute(name = "proformaInd")
+
     private java.lang.String proformaInd;
-    @XmlAttribute(name = "anonymousInd")
+
     private java.lang.String anonymousInd;
-    @XmlAttribute(name = "crossDept")
+
     private java.lang.String crossDept;
-    @XmlAttribute(name = "coordinator")
+
     private java.lang.String coordinator;
-    @XmlAttribute(name = "coordinatorInd")
+
     private java.lang.String coordinatorInd;
-    @XmlAttribute(name = "crossDeptInd")
+
     private java.lang.String crossDeptInd;
-    @XmlAttribute(name = "MISUpdateDate")	
+
     private java.lang.String MISUpdateDate;
-    @XmlAttribute(name = "lcsdFileReference")
+
     private java.lang.String lcsdFileReference;
-    @XmlAttribute(name = "lastModifiedDate")
+
     private java.lang.String lastModifiedDate;
-    @XmlAttribute(name = "subjectOfficerEmail")
+
     private java.lang.String subjectOfficerEmail;
-    @XmlAttribute(name = "subjectOfficerPhone")
+
     private java.lang.String subjectOfficerPhone;
-    @XmlAttribute(name = "subjectOfficerPost")
+
     private java.lang.String subjectOfficerPost;
-    @XmlAttribute(name = "subjectMatterCode")
+
     private java.lang.String subjectMatterCode;
-    @XmlAttribute(name = "subjectOfficerFax")
+
     private java.lang.String subjectOfficerFax;
-    @XmlAttribute(name = "readyForReporting")
+
     private java.lang.String readyForReporting;
-    @XmlAttribute(name = "remarks")
+
     private java.lang.String remarks;
-    @XmlAttribute(name = "reqForService")
+
     private java.lang.String reqForService;
-    @XmlAttribute(name = "invtgResult")
+
     private java.lang.String invtgResult;
-    @XmlAttribute(name = "natureCode")
+
     private java.lang.String natureCode;
-    @XmlAttribute(name = "catCode")
+
     private java.lang.String catCode;
-    @XmlAttribute(name = "venueTypeCode")
+
     private java.lang.String venueTypeCode;
-    @XmlAttribute(name = "unitCode")
+
     private java.lang.String unitCode;
-    @XmlAttribute(name = "officeCode")
+
     private java.lang.String officeCode;
-    @XmlAttribute(name = "venueCode")
+
     private java.lang.String venueCode;
-    @XmlAttribute(name = "districtCode")
+
     private java.lang.String districtCode;
-    @XmlAttribute(name = "sectionCode")
+
     private java.lang.String sectionCode;
-    @XmlAttribute(name = "divisionCode")
+
     private java.lang.String divisionCode;
-    @XmlAttribute(name = "branchCode")
+
     private java.lang.String branchCode;
-    @XmlAttribute(name = "caseChannel")
+
     private java.lang.String caseChannel;
-    @XmlAttribute(name = "caseSource")
+
     private java.lang.String caseSource;
-    @XmlAttribute(name = "caseDesc")
+
     private java.lang.String caseDesc;
-    @XmlAttribute(name = "caseTitle")
+
     private java.lang.String caseTitle;
-    @XmlAttribute(name = "channelCode")
+
     private java.lang.String channelCode;
-    @XmlAttribute(name = "caseTypeCode")
+
     private java.lang.String caseTypeCode;
-    @XmlAttribute(name = "referralStatusCodeDate")
+
     private java.lang.String referralStatusCodeDate;
-    @XmlAttribute(name = "referralStatusCode")
+
     private java.lang.String referralStatusCode;
-    @XmlAttribute(name = "referralNo")
+
     private java.lang.String referralNo;
-    @XmlAttribute(name = "caseStatusCode")
+
     private java.lang.String caseStatusCode;
-    @XmlAttribute(name = "statusCodeDate")
+
     private java.lang.String statusCodeDate;
-    @XmlAttribute(name = "caseDate")
+
     private java.lang.String caseDate;
-    @XmlAttribute(name = "caseNo")
+
     private java.lang.String caseNo;
-    @XmlAttribute(name = "actionOfficerEmail")
+
     private java.lang.String actionOfficerEmail;
-    @XmlAttribute(name = "actionOfficerPost")
+
     private java.lang.String actionOfficerPost;
-    @XmlAttribute(name = "actionOfficerPhone")
+
     private java.lang.String actionOfficerPhone;
-    @XmlAttribute(name = "actionOfficerFax")
+
     private java.lang.String actionOfficerFax;
-    @XmlAttribute(name = "wcisURL")
+
     private java.lang.String wcisURL;
-    @XmlAttribute(name = "duplicatedCase")
+
     private java.lang.String duplicatedCase;
-    @XmlAttribute(name = "duplicatedCaseRe")
+
     private java.lang.String duplicatedCaseRe;
-    @XmlAttribute(name = "staffGrade")
+
     private java.lang.String staffGrade;
-    @XmlAttribute(name = "staffRank")
+
     private java.lang.String staffRank;
-    @XmlAttribute(name = "spVenueAns")
+
     private java.lang.String spVenueAns;
-    @XmlAttribute(name = "spVenueTypeAns")
+
     private java.lang.String spVenueTypeAns;
-    @XmlAttribute(name = "spCatAns")
+
     private java.lang.String spCatAns;
-    @XmlAttribute(name = "spNatureAns")
+
     private java.lang.String spNatureAns;
 
     public LCSDCaseDetailList() {
@@ -1425,7 +1362,7 @@ public class LCSDCaseDetailList  implements java.io.Serializable {
     public void setSpNatureAns(java.lang.String spNatureAns) {
         this.spNatureAns = spNatureAns;
     }
-/*
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof LCSDCaseDetailList)) return false;
@@ -1788,7 +1725,7 @@ public class LCSDCaseDetailList  implements java.io.Serializable {
         __hashCodeCalc = false;
         return _hashCode;
     }
-*/
+
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
         new org.apache.axis.description.TypeDesc(LCSDCaseDetailList.class, true);

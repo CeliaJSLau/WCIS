@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class GetLCSDMappingListReq  implements java.io.Serializable {
-    private java.lang.String token;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6253865345702164962L;
+
+	private java.lang.String token;
 
     private java.lang.String report_Date;
 

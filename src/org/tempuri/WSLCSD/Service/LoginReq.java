@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class LoginReq  implements java.io.Serializable {
-    private java.lang.String userName;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7702086000690632161L;
+
+	private java.lang.String userName;
 
     private java.lang.String password;
 

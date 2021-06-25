@@ -8,7 +8,11 @@
 package org.tempuri.WSLCSD.Service;
 
 public class UploadLCSDFileRsp  implements java.io.Serializable {
-    private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3464342680391939027L;
+	private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
 
     public UploadLCSDFileRsp() {
     }

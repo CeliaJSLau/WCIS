@@ -9,7 +9,12 @@ package org.tempuri.WSLCSD.Service;
 
 public class MainLocator extends org.apache.axis.client.Service implements org.tempuri.WSLCSD.Service.Main {
 
-    public MainLocator() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 440527684098565724L;
+
+	public MainLocator() {
     }
 
 
@@ -22,8 +27,8 @@ public class MainLocator extends org.apache.axis.client.Service implements org.t
     }
 
     // Use to get a proxy class for mainSoap
-//    private java.lang.String mainSoap_address = "https://127.0.0.1/wslcsd/main.asmx";
-    private java.lang.String mainSoap_address = new WCISFileIO().getPath("WSLOCATOR");
+    private java.lang.String mainSoap_address = new Util().getPath("WSLOCATOR");
+
     public java.lang.String getmainSoapAddress() {
         return mainSoap_address;
     }
@@ -67,9 +72,7 @@ public class MainLocator extends org.apache.axis.client.Service implements org.t
 
 
     // Use to get a proxy class for mainSoap12
-//    private java.lang.String mainSoap12_address = "https://127.0.0.1/wslcsd/main.asmx";
-    private java.lang.String mainSoap12_address = new WCISFileIO().getPath("WSLOCATOR");
-    
+    private java.lang.String mainSoap12_address = new Util().getPath("WSLOCATOR");
 
     public java.lang.String getmainSoap12Address() {
         return mainSoap12_address;

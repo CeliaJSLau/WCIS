@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class LoginRsp  implements java.io.Serializable {
-    private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 9044664128731231362L;
+
+	private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
 
     private java.lang.String token;
 

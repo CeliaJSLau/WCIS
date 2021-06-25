@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class GetLCSDCaseDetailRsp  implements java.io.Serializable {
-    private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4215590108946180773L;
+
+	private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
 
     private org.tempuri.WSLCSD.Service.LCSDCaseDetailList[] LCSDCaseDetailLists;
 

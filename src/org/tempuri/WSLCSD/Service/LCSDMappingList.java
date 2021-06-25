@@ -6,33 +6,20 @@
  */
 
 package org.tempuri.WSLCSD.Service;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlAttribute;
 
-
-@XmlAccessorType(XmlAccessType.FIELD)
-//XML文件中的根标识
-
-//控制JAXB 绑定类中属性和字段的排序
-@XmlType(propOrder = { 
-		"id", 
-		"name", 
-		"activeflag"
-})
 public class LCSDMappingList  implements java.io.Serializable {
-	private static final long serialVersionUID = 1L;
-	@XmlAttribute(name = "id")
-    private java.lang.String id;
-	@XmlAttribute(name = "name")
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5953069513634942443L;
+
+	private java.lang.String id;
+
     private java.lang.String name;
-	@XmlAttribute(name = "activeFlag")
+
     private java.lang.String activeflag;
 
     public LCSDMappingList() {
-    	super();
     }
 
     public LCSDMappingList(
@@ -103,7 +90,7 @@ public class LCSDMappingList  implements java.io.Serializable {
     public void setActiveflag(java.lang.String activeflag) {
         this.activeflag = activeflag;
     }
-/*
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof LCSDMappingList)) return false;
@@ -148,7 +135,7 @@ public class LCSDMappingList  implements java.io.Serializable {
         __hashCodeCalc = false;
         return _hashCode;
     }
-*/
+
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
         new org.apache.axis.description.TypeDesc(LCSDMappingList.class, true);

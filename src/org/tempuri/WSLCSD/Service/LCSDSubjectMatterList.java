@@ -7,33 +7,20 @@
 
 package org.tempuri.WSLCSD.Service;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-
-@XmlAccessorType(XmlAccessType.FIELD)
-//XML文件中的根标识
-
-//控制JAXB 绑定类中属性和字段的排序
-@XmlType(propOrder = { 
-		"id", 
-		"name", 
-		"nameChi",
-		"effStartDate",
-		"effEndDate"
-})
 public class LCSDSubjectMatterList  implements java.io.Serializable {
-	@XmlAttribute(name = "id")
-    private java.lang.String id;
-	@XmlAttribute(name = "name")
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 5857535764384463909L;
+
+	private java.lang.String id;
+
     private java.lang.String name;
-	@XmlAttribute(name = "nameChi")
+
     private java.lang.String nameChi;
-	@XmlAttribute(name = "effStartDate")
+
     private java.lang.String effStartDate;
-	@XmlAttribute(name = "effEndDate")
+
     private java.lang.String effEndDate;
 
     public LCSDSubjectMatterList() {
@@ -151,7 +138,7 @@ public class LCSDSubjectMatterList  implements java.io.Serializable {
     public void setEffEndDate(java.lang.String effEndDate) {
         this.effEndDate = effEndDate;
     }
-/*
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof LCSDSubjectMatterList)) return false;
@@ -208,7 +195,7 @@ public class LCSDSubjectMatterList  implements java.io.Serializable {
         __hashCodeCalc = false;
         return _hashCode;
     }
-*/
+
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
         new org.apache.axis.description.TypeDesc(LCSDSubjectMatterList.class, true);

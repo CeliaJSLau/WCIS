@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class GetLCSDSubjectMatterListRsp  implements java.io.Serializable {
-    private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 813153045264244417L;
+
+	private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
 
     private org.tempuri.WSLCSD.Service.LCSDSubjectMatterList[] LCSDSubjectMatterLists;
 

@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class GetLCSDCaseDetailReq  implements java.io.Serializable {
-    private java.lang.String token;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3199900226571586945L;
+
+	private java.lang.String token;
 
     private java.lang.String report_Date;
 

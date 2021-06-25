@@ -8,7 +8,12 @@
 package org.tempuri.WSLCSD.Service;
 
 public class GetLCSDMappingListRsp  implements java.io.Serializable {
-    private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6536591206878258846L;
+
+	private org.tempuri.WSLCSD.Service.ReturnStatusList[] returnStatusLists;
 
     private org.tempuri.WSLCSD.Service.LCSDMappingList[] LCSDMappingLists;
 
